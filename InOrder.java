@@ -11,10 +11,10 @@ public class InOrder {
 			last = x;
 			x = (int) (Math.random() * 10.0);
 			if (x <= last) {
-				System.out.println(last);
+				System.out.print(last + " ");
 				x = -1;
 			} else
-				System.out.println(last);
+				System.out.print(last + " ");
 		}
 	}
 }
