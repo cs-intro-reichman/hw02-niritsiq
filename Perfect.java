@@ -16,7 +16,7 @@ public class Perfect {
 		}
 		if (count > 0 && sum == a) {
 			count = 0;
-			str += a + " is a perfect number since " + a + " = ";
+			str += a + " is a perfect number since " + a + " =";
 			for (int j = 1; j < a; j++) {
 				if (a % j == 0) {
 					if (j == 1)
