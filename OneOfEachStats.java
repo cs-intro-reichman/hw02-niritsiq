@@ -47,16 +47,15 @@ public class OneOfEachStats {
 					// part of the previous ex System.out.print("b ");
 				}
 
-				count++;
-				if (count == 2)
-					sum2++;
-				else if (count == 3)
-					sum3++;
-				else if (count >= 4) {
-					sum4++;
-					bigger = bigger + count;
-				}
-
+				count++; // number of the children in one family
+			}
+			if (count == 2)
+				sum2++;
+			else if (count == 3)
+				sum3++;
+			else if (count >= 4) {
+				sum4++;
+				bigger = bigger + count;
 			}
 			// part of OneOfEach System.out.println();
 			// part of OneOfEach System.out.println("You made it... and you now have " +
