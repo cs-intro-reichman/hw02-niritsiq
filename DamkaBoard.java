@@ -12,8 +12,12 @@ public class DamkaBoard {
 				if (i % 2 == 1 && check) {
 					System.out.print(" " + "* ");
 					check = false;
-				} else
-					System.out.print("* ");
+				} else {
+					if (j + 1 == a)
+						System.out.print("*");
+					else
+						System.out.print("* ");
+				}
 			}
 			System.out.println();
 
