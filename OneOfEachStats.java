@@ -29,7 +29,7 @@ public class OneOfEachStats {
 		//// This is the only change that you have to do in the program.
 
 		int sum2 = 0, sum3 = 0, sum4 = 0;
-		double avg;
+		double avg, bigger = 0.0;
 		double rnd = generator.nextDouble();
 		// i replace the use of t by T
 		// int t = Integer.parseInt(args[0]);
@@ -53,8 +53,10 @@ public class OneOfEachStats {
 				sum2++;
 			else if (count == 3)
 				sum3++;
-			else
+			else {
 				sum4++;
+				bigger = bigger + count;
+			}
 			// part of OneOfEach System.out.println();
 			// part of OneOfEach System.out.println("You made it... and you now have " +
 			// count + " children");
@@ -62,7 +64,7 @@ public class OneOfEachStats {
 		}
 		int common;
 		common = Math.max(sum2, Math.max(sum3, sum4));
-		avg = (double) ((double) ((sum2 * 2) + (sum3 * 3) + (sum4 * 4)) / T);
+		avg = (double) ((double) ((sum2 * 2) + (sum3 * 3) + (bigger)) / T);
 		System.out.println("Average: " + avg + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + sum2);
 		System.out.println("Number of families with 3 children: " + sum3);
