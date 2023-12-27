@@ -10,7 +10,10 @@ public class DamkaBoard {
 			check = true;
 			for (int j = 0; j < a; j++) {
 				if (i % 2 == 1 && check) {
-					System.out.print(" " + "* ");
+					if (j + 1 == a)
+						System.out.print(" " + "*");
+					else
+						System.out.print(" " + "* ");
 					check = false;
 				} else {
 					if (j + 1 == a)
