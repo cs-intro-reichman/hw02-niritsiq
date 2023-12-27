@@ -53,7 +53,7 @@ public class OneOfEachStats {
 				sum2++;
 			else if (count == 3)
 				sum3++;
-			else {
+			else if (count >= 4) {
 				sum4++;
 				bigger = bigger + count;
 			}
