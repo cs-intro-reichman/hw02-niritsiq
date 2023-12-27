@@ -39,7 +39,7 @@ public class OneOfEachStats {
 			int count = 0;
 			while (!girl || !boy) {
 				// bigger than 0.5 mean girl
-				if (rnd > 0.5) {
+				if (generator.nextDouble() > 0.5) {
 					girl = true;
 					// part of the previous ex System.out.print("g ");
 				} else {
@@ -67,7 +67,12 @@ public class OneOfEachStats {
 		System.out.println("Number of families with 2 children: " + sum2);
 		System.out.println("Number of families with 3 children: " + sum3);
 		System.out.println("Number of families with 4 or more children: " + sum4);
-		System.out.println("The most common number of children is " + common + " or more.");
+		if (sum4 == common)
+			System.out.println("The most common number of children is " + common + " or more.");
+		else if (sum3 == common)
+			System.out.println("The most common number of children is 3.");
+		else if (sum2 == common)
+			System.out.println("The most common number of children is 2.");
 
 	}
 }
