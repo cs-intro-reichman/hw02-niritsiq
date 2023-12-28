@@ -27,7 +27,7 @@ public class OneOfEachStats {
 		//// just like you had in the previous version, except that the
 		//// randomization will be based on the given seed.
 		//// This is the only change that you have to do in the program.
-
+		int children = 0;
 		int sum2 = 0, sum3 = 0, sum4 = 0;
 		double avg, bigger = 0.0;
 		double rnd = generator.nextDouble();
@@ -38,6 +38,7 @@ public class OneOfEachStats {
 			boolean girl = false, boy = false;
 			int count = 0;
 			while (!girl || !boy) {
+				children++;
 				// bigger than 0.5 mean girl
 				if (generator.nextDouble() > 0.5) {
 					girl = true;
@@ -64,9 +65,9 @@ public class OneOfEachStats {
 		}
 		int common;
 		common = Math.max(sum2, Math.max(sum3, sum4));
-		double children;
-		children = (((double) (sum2 * 2) + (sum3 * 3)) + (bigger));
-		avg = (children / T);
+
+		// children = (((double) (sum2 * 2) + (sum3 * 3)) + (bigger));
+		avg = (double) (children / T);
 		// avg = ((double) ((double) (sum2 * 2) + (sum3 * 3) + (bigger)) / T);
 		System.out.println("Average: " + avg + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + sum2);
