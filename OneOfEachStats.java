@@ -31,7 +31,7 @@ public class OneOfEachStats {
 		int sum2 = 0, sum3 = 0, sum4 = 0;
 		double avg, bigger = 0.0;
 		double children = 0.0;
-		double rnd = generator.nextDouble();
+		// double rnd = generator.nextDouble();
 		// i replace the use of t by T
 		// int t = Integer.parseInt(args[0]);
 		for (int i = 0; i < T; i++) {
