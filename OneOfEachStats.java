@@ -28,8 +28,8 @@ public class OneOfEachStats {
 		//// randomization will be based on the given seed.
 		//// This is the only change that you have to do in the program.
 
-		int sum2 = 0, sum3 = 0, sum4 = 0;
-		double avg, bigger = 0.0;
+		int sum2 = 0, sum3 = 0, sum4 = 0, bigger = 0;
+		double avg;
 		double rnd = generator.nextDouble();
 		// i replace the use of t by T
 		// int t = Integer.parseInt(args[0]);
@@ -64,7 +64,10 @@ public class OneOfEachStats {
 		}
 		int common;
 		common = Math.max(sum2, Math.max(sum3, sum4));
-		avg = ((double) ((double) (sum2 * 2) + (sum3 * 3) + (bigger)) / T);
+		int children;
+		children = ((sum2 * 2) + (sum3 * 3) + (bigger));
+		avg = (double) (children / T);
+		// avg = ((double) ((double) (sum2 * 2) + (sum3 * 3) + (bigger)) / T);
 		System.out.println("Average: " + avg + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + sum2);
 		System.out.println("Number of families with 3 children: " + sum3);
