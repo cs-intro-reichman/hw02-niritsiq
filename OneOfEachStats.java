@@ -66,7 +66,7 @@ public class OneOfEachStats {
 		common = Math.max(sum2, Math.max(sum3, sum4));
 		double children;
 		children = (double) (((double) (sum2 * 2) + (sum3 * 3)) + (bigger));
-		avg = (double) (children / T);
+		avg = (children / T);
 		// avg = ((double) ((double) (sum2 * 2) + (sum3 * 3) + (bigger)) / T);
 		System.out.println("Average: " + avg + " children to get at least one of each gender.");
 		System.out.println("Number of families with 2 children: " + sum2);
